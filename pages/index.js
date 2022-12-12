@@ -2,7 +2,6 @@ import * as React from 'react';
 import Head from 'next/head'
 import Navbar from '../components/navbar'
 import utilStyles from '../styles/utils.module.css'
-import { getSortedPostsData } from '../lib/posts'
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
@@ -23,7 +22,7 @@ import Avatar from '@mui/material/Avatar';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import Link from '@mui/material/Link';
 
-export default function Home({ allPostsData }) {
+export default function Home() {
   const [value, setValue] = React.useState('1');
 
   const handleChange = (event, newValue) => {
@@ -374,13 +373,4 @@ export default function Home({ allPostsData }) {
       </div>
     </div>
   )
-}
-
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
-  return {
-    props: {
-      allPostsData
-    }
-  }
 }
