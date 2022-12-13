@@ -28,9 +28,7 @@ export default function Home() {
   
   return (
     <div >
-      <Head>
         <Navbar/>
-      </Head>
       <div className="homePage">
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px} sectionBox`}>
           <h2 className={utilStyles.headingLg}>Discover and collect in <br/> extraordinary NFT marketplace</h2>
@@ -188,9 +186,7 @@ export default function Home() {
                   <Tab label="Category" value="1" />
                   <Tab label="Cheapest" value="2" />
                   <Tab label="Newest" value="3" />
-                  <Button variant="contained" style={{background:"#c4c4c3"}}>
-                     <FilterAltIcon/> Filter
-                  </Button> 
+                 
                 </TabList>
                 </Grid>
               </Grid>
